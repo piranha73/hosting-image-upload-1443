@@ -4,6 +4,12 @@
     <%= article.title %>
   </p>
 
+  <% if article.photo.attached? %>
+    <%= cl_image_tag article.photo.key, width: 100 %>
+  <% else %>
+    <img src="https://ih1.redbubble.net/image.3457346080.0419/fposter,small,wall_texture,square_product,600x600.u3.jpg", width="100px">
+  <% end %>
+
   <p>
     <strong>Body:</strong>
     <%= article.body %>
